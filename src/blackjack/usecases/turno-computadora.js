@@ -32,13 +32,39 @@ export const turnoComputadora = ( puntosMinimos, puntosHTML, divCartasComputador
 
     setTimeout(() => {
         if( puntosComputadora === puntosMinimos ) {
-            alert('Nadie gana :(');
+            //alert('Nadie gana :(');
+            swal({
+                title: "Nadie gana :(",
+                text: "Empate en el juego black jack!",
+                icon: "warning",
+                button: "Aceptar",
+              });
         } else if ( puntosMinimos > 21 ) {
-            alert('Computadora gana')
+            //alert('Computadora gana')
+            //swal("Computadora Gana");
+            swal({
+                title: "Computadora Gana!",
+                text: "Perdiste al juego black jack!",
+                icon: "error",
+                button: "Aceptar",
+              });
         } else if( puntosComputadora > 21 ) {
-            alert('Jugador Gana');
+            //alert('Jugador Gana');
+            swal({
+                title: "Jugador Gana!",
+                text: "Ganaste al juego black jack!",
+                icon: "success",
+                button: "Aceptar",
+              });
         } else {
-            alert('Computadora Gana')
+            //alert('Computadora Gana')
+            //swal("Computadora Gana");
+            swal({
+                title: "Computadora Gana!",
+                text: "Perdiste al juego black jack!",
+                icon: "error",
+                button: "Aceptar",
+              });
         }
     }, 100 );
 }
